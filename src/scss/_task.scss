@@ -1,0 +1,145 @@
+.container {
+    max-width: 1440px;
+    box-sizing: border-box;
+    padding: 7vw;
+    margin: 0 auto;
+
+    @media (orientation: landscape) {
+        @include flex;
+        padding: 7.1vw 4vw;
+    }
+
+    @media (min-width: 780px) and (max-height: 415px) {
+        padding: 2.2vw 4vw;
+    }
+
+    @media (min-width: 962px) {
+        padding: 5vw 8.2vw;
+    }
+
+
+    .task {
+
+        @media (orientation: landscape) {
+            @include flex;
+        }
+
+        &__img-container {
+            flex-basis: 48%;
+
+            &__img {
+                display: block;
+                width: 100%;
+                max-height: 90vh;
+            }
+        }
+
+        &__text {
+            text-align: center;
+            flex-basis: 50%;
+
+            @media (orientation: landscape) {
+                text-align: left;
+                margin-left: clamp(30px, 6.5vw, 95px);
+            }
+
+            &__tittle {
+                font-size: $tittleFontSize;
+                font-weight: 700;
+                margin-top: .85em;
+
+                @media (orientation: landscape) {
+                    margin-top: 0
+                }
+
+                @media (min-height: 600px) {
+                    margin-bottom: 0;
+                }
+
+                @media (min-width: 1024px) {
+                    font-size: clamp(24px, 6vmin, 42px);
+                }
+
+            }
+
+            &__description {
+                line-height: clamp(22px, 2.9vh, 24px);
+                font-size: clamp(12px, 4vmin, 16px);
+
+                @media (min-width: 768px) and (orientation: portrait) {
+                    padding: 0 70px;
+                }
+
+            }
+
+            &__btn {
+                @include button-style($mainBeige);
+                margin-top: 0.50em;
+
+                &:hover {
+                    cursor: pointer;
+                    background-color: lighten($mainBeige, 2%);
+                }
+            }
+        }
+
+        &__modal-wrap {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(18, 18, 18, .5);
+            @include flex;
+            justify-content: center;
+            visibility: hidden;
+
+            &__popup {
+                box-sizing: border-box;
+                position: relative;
+                width: 85%;
+                max-width: 920px;
+                background-color: #fff;
+                padding: clamp(10px, 6.5vmin, 40px) clamp(24px, 10vw, 95px);
+
+                &__tittle {
+                    font-size: $tittleFontSize;
+                    font-weight: 700;
+                    margin: 16px 0;
+
+                    @media (min-width: 1024px) {
+                        font-size: clamp(24px, 5.5vmin, 42px);
+                    }
+                }
+
+                &__info {
+                    line-height: 24px;
+                    margin-top: clamp(16px, 2vw, 24px);
+                    margin-bottom: clamp(16px, 2vw, 24px);
+                }
+
+                &__icon {
+                    position: absolute;
+                    top: 30px;
+                    right: clamp(30px, 5vw, 35px);
+                    width: 21px;
+                    height: 21px;
+
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+
+                &__resetBtn {
+                    @include button-style($mainBeige);
+                    margin: 10px 0 16px 0;
+
+                    &:hover {
+                        cursor: pointer;
+                        background-color: lighten($mainBeige, 2%);
+                    }
+                } 
+            }
+        }
+    }
+}

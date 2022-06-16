@@ -1,0 +1,14 @@
+@mixin button-style ($bgColor) {
+    background-color: $bgColor;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 32px;
+    padding: 16px 40px;
+    font-weight: 700;
+    transition: background-color .2s;
+}
+
+@mixin flex {
+    display: flex;
+    align-items: center;
+}

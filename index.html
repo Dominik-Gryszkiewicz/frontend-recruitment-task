@@ -1,11 +1,61 @@
 <!doctype html>
 <html lang="en">
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>[Name] [Surname] - Recruitment task</title>
-</head>
-<body>
 
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Dominik Gryszkiewicz - Recruitment task</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="dist/main.css">
+</head>
+
+<body>
+    <div class="container">
+        <section class="task">
+            <div class="task__img-container">
+                <picture>
+                    <source srcset="./images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_c_scale,w_1400.jpg"
+                        media="(min-width: 1920px)">
+                    <source
+                        srcset="./images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_ar_16_9,c_fill,g_auto__c_scale,w_720.jpg"
+                        media="(min-height: 1024px)">
+                    <source
+                        srcset="./images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_ar_4_3,c_fill,g_auto__c_scale,w_538.jpg"
+                        media="(min-height: 960px)">
+                    <source srcset="./images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_c_scale,w_1234.jpg"
+                        media="(min-width: 1200px)">
+                    <source srcset="./images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_c_scale,w_1002.jpg"
+                        media="(min-width: 1024px)">
+                    <source
+                        srcset="./images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_ar_1_1,c_fill,g_auto__c_scale,w_450.jpg"
+                        media="(min-width: 350px)">
+                    <source
+                        srcset="./images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_ar_1_1,c_fill,g_auto__c_scale,w_200.jpg"
+                        media="(min-width: 310px)">
+                    <img src="./images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_c_scale,w_1400.jpg" alt="beach image"
+                        class="task__img-container__img" />
+                </picture>
+            </div>
+            <div class="task__text">
+                <h1 class="task__text__tittle">Lorem Ipsum</h1>
+                <p class="task__text__description">Infinitely scalable, feature-rich and cloud-native data management
+                    and protection for modern and legacy infrastructures and SaaS platforms, managed via a single app
+                    with no hardware required.</p>
+                <button class="task__text__btn">Button</button>
+            </div>
+            <div class="task__modal-wrap">
+                <div class="task__modal-wrap__popup">
+                    <h2 class="task__modal-wrap__popup__tittle">Alert!</h2>
+                    <p class="task__modal-wrap__popup__info">You have clicked <b><span class="click-numbers"></span> times</b> to related button.</p>
+                    <button class="task__modal-wrap__popup__resetBtn">Reset</button>
+                    <img src="./images/iconmonstr-x-mark-lined.svg" alt="close icon" class="task__modal-wrap__popup__icon">
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="dist/all.js"></script>
 </body>
